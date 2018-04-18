@@ -1,15 +1,18 @@
 # Automatically generate headlines to short articles
 
-<a target="_blank" href="http://twitter.com/udibr"><img alt='Twitter followers' src="https://img.shields.io/twitter/follow/udibr.svg?style=social"></a>
+### Aim : This summarizer will be acting as a submodule in NLPChatbot to summarize a conversation with user and extract out context for meaningful replies.
 
+Procedure :
 
-This project attempts to reproduce the results in the paper:
-[Generating News Headlines with Recurrent Neural Networks](http://arxiv.org/abs/1512.01712)
+* To conduct training only on partial dataset( 100k _approx._).
+* Port this project to tensorflow-gpu-1.7.
+* Making a suitable plugin from it for above NLPChatbot.
 
+---
 ## How to run
 ### Software
 * The code is running with [jupyter notebook](http://jupyter.org/)
-* Install [Keras](http://keras.io/)
+* Install [Tensorflow](https://www.tensorflow.org/)
 * `pip install python-Levenshtein`
 
 ### Data
@@ -23,7 +26,7 @@ The texts should be already tokenized and the tokens separated by spaces.
 Once you have the data ready save it in a python pickle file as a tuple:
 `(heads, descs, keywords)` were `heads` is a list of all the head strings,
 `descs` is a list of all the article strings in the same order and length as `heads`.
-I ignore the `keywrods` information so you can place `None`.
+I ignore the `keywords` information so you can place `None`.
 
 ### Build a vocabulary of words
 The [vocabulary-embedding](./vocabulary-embedding.ipynb)
@@ -31,7 +34,7 @@ notebook describes how a dictionary is built for the tokens and how
 an initial embedding matrix is built from [GloVe](http://nlp.stanford.edu/projects/glove/)
 
 ### Train a model
-[train](./train.ipynb) notebook describes how a model is trained on the data using [Keras](http://keras.io/)
+[train](./train.ipynb) notebook describes how a model is trained on the data using [Tensorflow](https://www.tensorflow.org/)
 
 ### Use model to generate new headlines
 [predict](./predict.ipynb) generate headlines by the trained model and
@@ -47,7 +50,6 @@ Good (cherry picking) examples of headlines generated
 
 ## Examples of attention weights
 ![attention weights](./attention_weights.png)
-
 
 ---
 
