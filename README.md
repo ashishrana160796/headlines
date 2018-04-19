@@ -2,12 +2,19 @@
 
 ### Aim : This summarizer will be acting as a submodule in NLPChatbot to summarize a conversation with user and extract out context for meaningful replies.
 
-Procedure :
+__Procedure :__
 
 * To conduct training only on partial dataset( 100k _approx._).
-* Port this project to tensorflow-gpu-1.7.
+* Port this project to Python 3.5 instead of python 2.7. 
 * Making a suitable plugin from it for above NLPChatbot.
+* _glove.6B.50d.txt_ is used for training for reduced the training time.
+ 
+__Current System State :__
 
+* tensorflow 1.7 gpu
+* keras 2.1.5
+* python 3.5
+ 
 ---
 ## How to run
 ### Software
